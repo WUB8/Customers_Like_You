@@ -1,0 +1,21 @@
+{
+  "k": 50,
+  "test_customers": 1913,
+  "eligible_heldout_pairs": 44714,
+  "baseline_hit_rate_at_10": 0.26868792472556197,
+  "svd_hit_rate_at_10": 0.24046001045478307,
+  "pca_hit_rate_at_10": 0.24098274960794563,
+  "svd_fit_seconds": 0.05687880000004952,
+  "svd_scoring_seconds": 0.02199209999980667,
+  "product_neighbor_generation_seconds": 0.05060849999972561,
+  "svd_total_nightly_refresh_seconds": 0.1294793999995818,
+  "baseline_scoring_seconds": 0.5463221999998495,
+  "svd_error": 0.8323402295758747,
+  "pca_error": 0.8316459811007642,
+  "dense_float64_MB": 161.300256,
+  "stored_svd_factors_MB_float32": 1.8314,
+  "compression_vs_dense_float64": 88.07483673692258,
+  "recommendation_definition": "Sum of cosine similarities to each previously bought product, exclude already-owned",
+  "hit_metric": "Fraction of eligible test customers with at least one new future item in their top 10 suggestions",
+  "timing_definition": "SVD fit + all product neighbour updates + held-out customer scoring; disk I/O and Excel parsing excluded"
+}

@@ -1,0 +1,7 @@
+step,rows_before,rows_removed,rows_remaining,reason
+1 cancel invoices,1067371,19494,1047877,"C-prefixed invoice represents a cancellation, not a positive sale"
+2 non-positive quantity,1047877,3457,1044420,"Negative/zero quantities are returns or adjustments, not purchases"
+3 non-positive price,1044420,2750,1041670,Zero/negative prices cannot represent paid purchases
+4 non-product codes,1041670,6049,1035621,Keep 5-6 digit stock numbers with optional variant letter; reject service/fee codes
+5 missing customer ID,1035621,234062,801559,Unidentified purchases cannot be linked to a customer; never infer customer IDs
+6 invalid invoice date,801559,0,801559,A valid time is required for a leak-free chronological split

@@ -1,0 +1,71 @@
+{
+  "source": "UCI Online Retail II (Chen, 2012), CC BY 4.0",
+  "raw_rows": 1067371,
+  "sheet_rows": {
+    "Year 2009-2010": 525461,
+    "Year 2010-2011": 541910
+  },
+  "cleaned_rows": 801559,
+  "time_cutoff_exclusive_train": "2011-10-09 12:50:00",
+  "training_rows_before_product_filter": 683060,
+  "training_rows_after_product_filter": 678701,
+  "test_rows_before_eligibility_filter": 118499,
+  "test_eligible_customers": 1913,
+  "test_heldout_unique_customer_product_pairs": 44714,
+  "matrix_shape": [
+    5473,
+    3684
+  ],
+  "matrix_nonzeros": 413459,
+  "matrix_sparsity_percent": 97.94936965258132,
+  "dense_float64_MB": 161.300256,
+  "csr_float32_MB": 3.329568,
+  "matrix_value": "binary (1 if bought at least once during TRAIN, else 0)",
+  "minimum_unique_train_customers_per_product": 10,
+  "customer_id_handling": "Internal index map saved under gitignored data/processed/ only",
+  "random_seed": 42,
+  "cleaning_steps": [
+    {
+      "step": "1 cancel invoices",
+      "rows_before": 1067371,
+      "rows_removed": 19494,
+      "rows_remaining": 1047877,
+      "reason": "C-prefixed invoice represents a cancellation, not a positive sale"
+    },
+    {
+      "step": "2 non-positive quantity",
+      "rows_before": 1047877,
+      "rows_removed": 3457,
+      "rows_remaining": 1044420,
+      "reason": "Negative/zero quantities are returns or adjustments, not purchases"
+    },
+    {
+      "step": "3 non-positive price",
+      "rows_before": 1044420,
+      "rows_removed": 2750,
+      "rows_remaining": 1041670,
+      "reason": "Zero/negative prices cannot represent paid purchases"
+    },
+    {
+      "step": "4 non-product codes",
+      "rows_before": 1041670,
+      "rows_removed": 6049,
+      "rows_remaining": 1035621,
+      "reason": "Keep 5-6 digit stock numbers with optional variant letter; reject service/fee codes"
+    },
+    {
+      "step": "5 missing customer ID",
+      "rows_before": 1035621,
+      "rows_removed": 234062,
+      "rows_remaining": 801559,
+      "reason": "Unidentified purchases cannot be linked to a customer; never infer customer IDs"
+    },
+    {
+      "step": "6 invalid invoice date",
+      "rows_before": 801559,
+      "rows_removed": 0,
+      "rows_remaining": 801559,
+      "reason": "A valid time is required for a leak-free chronological split"
+    }
+  ]
+}

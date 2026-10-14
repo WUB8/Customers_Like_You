@@ -1,0 +1,17 @@
+sheet,column,dtype,row_count,missing_count,missing_pct
+Year 2009-2010,Invoice,object,525461,0,0.0
+Year 2009-2010,StockCode,object,525461,0,0.0
+Year 2009-2010,Description,object,525461,2928,0.5572249891048051
+Year 2009-2010,Quantity,int64,525461,0,0.0
+Year 2009-2010,InvoiceDate,datetime64[ns],525461,0,0.0
+Year 2009-2010,Price,float64,525461,0,0.0
+Year 2009-2010,Customer ID,float64,525461,107927,20.53948818275762
+Year 2009-2010,Country,object,525461,0,0.0
+Year 2010-2011,Invoice,object,541910,0,0.0
+Year 2010-2011,StockCode,object,541910,0,0.0
+Year 2010-2011,Description,object,541910,1454,0.26831023601705084
+Year 2010-2011,Quantity,int64,541910,0,0.0
+Year 2010-2011,InvoiceDate,datetime64[ns],541910,0,0.0
+Year 2010-2011,Price,float64,541910,0,0.0
+Year 2010-2011,Customer ID,float64,541910,135080,24.92664833643963
+Year 2010-2011,Country,object,541910,0,0.0

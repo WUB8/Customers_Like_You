@@ -1,0 +1,3 @@
+method,k,fit_seconds,observed_peak_RSS_MB,stored_factors_MB_float32,variance_explained_fraction,relative_reconstruction_error,hit_rate_at_10,hit_customers,baseline_hit_rate_at_10,score_eligible_customers_seconds,component_1_meaning
+Truncated SVD,50,0.05687880000004952,448.843776,1.8314,0.2730311155319214,0.8323402295758747,0.24046001045478307,460,0.26868792472556197,0.02199209999980667,Raw buying activity / popularity (uncentred)
+PCA,50,0.08525980000013078,467.88608,1.846136,0.2741481065750122,0.8316459811007642,0.24098274960794563,461,0.26868792472556197,0.023571000000174536,Variation relative to average purchase profile (centred)

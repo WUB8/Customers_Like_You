@@ -1,0 +1,4 @@
+purchase_value,hit_rate_at_10,chosen_k
+binary,0.24046001045478307,50
+count_winsor99,0.16257187663355985,50
+log1p_quantity,0.21536853110297963,50
